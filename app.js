@@ -16,14 +16,13 @@ if (bookmark.classList.contains('active')) {
 }
 }
 
-//console.log(bookmark.classList.contains('active'))
-//console.log(bookmark.querySelector('circle').style.fill ="grey")
-
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-btn]')
 const continueButtons = document.querySelectorAll('[data-con-btn]')
+const body = document.querySelector('body')
 const bg = document.getElementById('bg-modal')
 const selectModal = document.querySelector('.modal-select')
+
 //Modal Open
 
 openModalButtons.forEach(button => {
@@ -36,7 +35,7 @@ openModalButtons.forEach(button => {
 function openModal(modal) {
     modal.classList.add('modal-active');
     bg.classList.add('bg-active')
-
+    body.classList.add('no-scroll')
 }
 //Modal continue
 continueButtons.forEach(button => {
@@ -62,5 +61,6 @@ closeModalButtons.forEach(button => {
 function removeModal(modal) {
     modal.classList.remove('modal-active');
     bg.classList.remove('bg-active')
+    body.classList.remove('no-scroll')
 }
 
