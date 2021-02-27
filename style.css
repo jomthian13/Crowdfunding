@@ -585,6 +585,7 @@ button:hover {
     width: 100%;
     height: 50%;
     opacity: 0;
+    display: none;
     background-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
     transition: opacity 200ms ease;
     position: fixed;
@@ -595,9 +596,11 @@ button:hover {
   }
   .dropdown:hover ~ .menu-bg {
     opacity: 1;
+    display: block;
   }
   .dropdown:focus ~ .menu-bg {
     opacity: 1;
+    display: block;
   }
 
   /*-------------------------------------------------------------*/
