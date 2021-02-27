@@ -16,12 +16,14 @@ if (bookmark.classList.contains('active')) {
 }
 }
 
+//-----------------------------------Modal Section---------------------------//
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-btn]')
 const continueButtons = document.querySelectorAll('[data-con-btn]')
 const body = document.querySelector('body')
 const bg = document.getElementById('bg-modal')
 const selectModal = document.querySelector('.modal-select')
+
 
 //Modal Open
 
@@ -63,4 +65,3 @@ function removeModal(modal) {
     bg.classList.remove('bg-active')
     body.classList.remove('no-scroll')
 }
-
